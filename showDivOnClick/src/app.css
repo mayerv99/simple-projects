@@ -1,0 +1,37 @@
+.main-div {
+  width: 100%;
+  height: 100vh;
+  background-color: #1f1b24;
+}
+
+.buttons-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #1a181d;
+  gap: 20px;
+}
+
+.buttons-div button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: blue;
+  padding: 5px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
