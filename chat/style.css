@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --purple: #633bbc;
+  --green: #07847e;
+  --secondary-green: #00b37e;
+  --background-primary: #1a1924;
+  --background-secondary: #282843;
+}
+
+body {
+  background-color: var(--background-primary);
+}
+
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > div {
+  width: 50%;
+}
+
+.profile {
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.status {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.status > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--secondary-green);
+}
+
+.status h4 {
+  font-size: 14px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: var(--secondary-green);
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.close button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-wrapper {
+  margin-top: 20px;
+  max-height: 79vh;
+  overflow-x: scroll;
+}
+
+.chat-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-wrapper > h3 {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.message {
+  margin: 20px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.message:not(.you) > .body {
+  margin-right: auto;
+}
+.message .body {
+  background-color: var(--purple);
+  padding: 10px;
+  max-width: 50vw;
+  border-radius: 0 10px 10px 10px;
+}
+
+.message.you {
+  margin-left: auto;
+}
+
+.message.you .head {
+  text-align: right;
+}
+
+.message.you .body {
+  margin-left: auto;
+  border-radius: 10px 10px 0 10px;
+  background-color: var(--green);
+}
+
+.input-wrapper {
+  position: fixed;
+  bottom: 40px;
+  width: 84%;
+  border-radius: 50px;
+  background: var(--background-secondary);
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.input-wrapper > input {
+  width: 90%;
+  height: 80%;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.input-wrapper > input:focus {
+  border: none;
+  outline: none;
+}
+
+.input-wrapper > input::placeholder {
+  color: #c3c3c3;
+}
